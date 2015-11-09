@@ -1,0 +1,242 @@
+/*
+ * Iconics
+ * (c) 2015 Blasdoise Foundation.
+ *
+ * IE8 and below use EOT and allow cross-site embedding. 
+ * IE9 uses WOFF which is base64 encoded to allow cross-site embedding.
+ * So unfortunately, IE9 will throw a console error, but it'll still work.
+ * When the font is base64 encoded, cross-site embedding works in Firefox
+ */
+
+@font-face {
+  font-family: 'Iconics';
+  src: url('iconics.eot?v=1.0.0');
+  src: url('iconics.eot?#iefix&v=1.0.0') format('embedded-opentype'), url('iconics.woff?v=1.0.0') format('woff'), url('iconics.ttf?v=1.0.0') format('truetype'), url('iconics.svg?v=1.0.0#iconicsregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/**
+ * All Iconics
+ */
+
+.iconic {
+	font-size: 16px;
+	vertical-align: top;
+	text-align: center;
+	-moz-transition: color .1s ease-in 0;
+	-webkit-transition: color .1s ease-in 0;
+	display: inline-block;
+	font-family: "Iconics";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	line-height: 1;
+	text-decoration: inherit;
+	text-transform: none;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	speak: none;
+}
+
+
+/**
+ * Helper classes
+ */
+
+.iconic-rotate-90 {
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+}
+
+.iconic-rotate-180 {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+
+.iconic-rotate-270 {
+	-webkit-transform: rotate(270deg);
+	-moz-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+	-o-transform: rotate(270deg);
+	transform: rotate(270deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+.iconic-flip-horizontal {
+	-webkit-transform: scale(-1, 1);
+	-moz-transform: scale(-1, 1);
+	-ms-transform: scale(-1, 1);
+	-o-transform: scale(-1, 1);
+	transform: scale(-1, 1);
+}
+
+.iconic-flip-vertical {
+	-webkit-transform: scale(1, -1);
+	-moz-transform: scale(1, -1);
+	-ms-transform: scale(1, -1);
+	-o-transform: scale(1, -1);
+	transform: scale(1, -1);
+}
+
+
+/**
+ * Individual icons
+ */
+
+.iconic-404:before { content: "\f423"; }
+.iconic-activity:before { content: "\f508"; }
+.iconic-anchor:before { content: "\f509"; }
+.iconic-aside:before { content: "\f101"; }
+.iconic-attachment:before { content: "\f416"; }
+.iconic-audio:before { content: "\f109"; }
+.iconic-blasdoise:before { content: "\f205"; }
+.iconic-bold:before { content: "\f471"; }
+.iconic-book:before { content: "\f444"; }
+.iconic-bug:before { content: "\f50a"; }
+.iconic-cart:before { content: "\f447"; }
+.iconic-category:before { content: "\f301"; }
+.iconic-chat:before { content: "\f108"; }
+.iconic-checkmark:before { content: "\f418"; }
+.iconic-close:before { content: "\f405"; }
+.iconic-close-alt:before { content: "\f406"; }
+.iconic-cloud:before { content: "\f426"; }
+.iconic-cloud-download:before { content: "\f440"; }
+.iconic-cloud-upload:before { content: "\f441"; }
+.iconic-code:before { content: "\f462"; }
+.iconic-codepen:before { content: "\f216"; }
+.iconic-cog:before { content: "\f445"; }
+.iconic-collapse:before { content: "\f432"; }
+.iconic-comment:before { content: "\f300"; }
+.iconic-day:before { content: "\f305"; }
+.iconic-digg:before { content: "\f221"; }
+.iconic-document:before { content: "\f443"; }
+.iconic-dot:before { content: "\f428"; }
+.iconic-downarrow:before { content: "\f502"; }
+.iconic-download:before { content: "\f50b"; }
+.iconic-draggable:before { content: "\f436"; }
+.iconic-dribbble:before { content: "\f201"; }
+.iconic-dropbox:before { content: "\f225"; }
+.iconic-dropdown:before { content: "\f433"; }
+.iconic-dropdown-left:before { content: "\f434"; }
+.iconic-edit:before { content: "\f411"; }
+.iconic-ellipsis:before { content: "\f476"; }
+.iconic-expand:before { content: "\f431"; }
+.iconic-external:before { content: "\f442"; }
+.iconic-facebook:before { content: "\f203"; }
+.iconic-facebook-alt:before { content: "\f204"; }
+.iconic-fastforward:before { content: "\f458"; }
+.iconic-feed:before { content: "\f413"; }
+.iconic-flag:before { content: "\f468"; }
+.iconic-flickr:before { content: "\f211"; }
+.iconic-foursquare:before { content: "\f226"; }
+.iconic-fullscreen:before { content: "\f474"; }
+.iconic-gallery:before { content: "\f103"; }
+.iconic-github:before { content: "\f200"; }
+.iconic-googleplus:before { content: "\f206"; }
+.iconic-googleplus-alt:before { content: "\f218"; }
+.iconic-handset:before { content: "\f50c"; }
+.iconic-heart:before { content: "\f461"; }
+.iconic-help:before { content: "\f457"; }
+.iconic-hide:before { content: "\f404"; }
+.iconic-hierarchy:before { content: "\f505"; }
+.iconic-home:before { content: "\f409"; }
+.iconic-image:before { content: "\f102"; }
+.iconic-info:before { content: "\f455"; }
+.iconic-instagram:before { content: "\f215"; }
+.iconic-italic:before { content: "\f472"; }
+.iconic-key:before { content: "\f427"; }
+.iconic-leftarrow:before { content: "\f503"; }
+.iconic-link:before { content: "\f107"; }
+.iconic-linkedin:before { content: "\f207"; }
+.iconic-linkedin-alt:before { content: "\f208"; }
+.iconic-location:before { content: "\f417"; }
+.iconic-lock:before { content: "\f470"; }
+.iconic-mail:before { content: "\f410"; }
+.iconic-maximize:before { content: "\f422"; }
+.iconic-menu:before { content: "\f419"; }
+.iconic-microphone:before { content: "\f50d"; }
+.iconic-minimize:before { content: "\f421"; }
+.iconic-minus:before { content: "\f50e"; }
+.iconic-month:before { content: "\f307"; }
+.iconic-move:before { content: "\f50f"; }
+.iconic-next:before { content: "\f429"; }
+.iconic-notice:before { content: "\f456"; }
+.iconic-paintbrush:before { content: "\f506"; }
+.iconic-path:before { content: "\f219"; }
+.iconic-pause:before { content: "\f448"; }
+.iconic-phone:before { content: "\f437"; }
+.iconic-picture:before { content: "\f473"; }
+.iconic-pinned:before { content: "\f308"; }
+.iconic-pinterest:before { content: "\f209"; }
+.iconic-pinterest-alt:before { content: "\f210"; }
+.iconic-play:before { content: "\f452"; }
+.iconic-plugin:before { content: "\f439"; }
+.iconic-plus:before { content: "\f510"; }
+.iconic-pocket:before { content: "\f224"; }
+.iconic-polldaddy:before { content: "\f217"; }
+.iconic-portfolio:before { content: "\f460"; }
+.iconic-previous:before { content: "\f430"; }
+.iconic-print:before { content: "\f469"; }
+.iconic-quote:before { content: "\f106"; }
+.iconic-rating-empty:before { content: "\f511"; }
+.iconic-rating-full:before { content: "\f512"; }
+.iconic-rating-half:before { content: "\f513"; }
+.iconic-reddit:before { content: "\f222"; }
+.iconic-refresh:before { content: "\f420"; }
+.iconic-reply:before { content: "\f412"; }
+.iconic-reply-alt:before { content: "\f466"; }
+.iconic-reply-single:before { content: "\f467"; }
+.iconic-rewind:before { content: "\f459"; }
+.iconic-rightarrow:before { content: "\f501"; }
+.iconic-search:before { content: "\f400"; }
+.iconic-send-to-phone:before { content: "\f438"; }
+.iconic-send-to-tablet:before { content: "\f454"; }
+.iconic-share:before { content: "\f415"; }
+.iconic-show:before { content: "\f403"; }
+.iconic-shuffle:before { content: "\f514"; }
+.iconic-sitemap:before { content: "\f507"; }
+.iconic-skip-ahead:before { content: "\f451"; }
+.iconic-skip-back:before { content: "\f450"; }
+.iconic-skype:before { content: "\f220"; }
+.iconic-spam:before { content: "\f424"; }
+.iconic-spotify:before { content: "\f515"; }
+.iconic-standard:before { content: "\f100"; }
+.iconic-star:before { content: "\f408"; }
+.iconic-status:before { content: "\f105"; }
+.iconic-stop:before { content: "\f449"; }
+.iconic-stumbleupon:before { content: "\f223"; }
+.iconic-subscribe:before { content: "\f463"; }
+.iconic-subscribed:before { content: "\f465"; }
+.iconic-summary:before { content: "\f425"; }
+.iconic-tablet:before { content: "\f453"; }
+.iconic-tag:before { content: "\f302"; }
+.iconic-time:before { content: "\f303"; }
+.iconic-top:before { content: "\f435"; }
+.iconic-trash:before { content: "\f407"; }
+.iconic-tumblr:before { content: "\f214"; }
+.iconic-twitch:before { content: "\f516"; }
+.iconic-twitter:before { content: "\f202"; }
+.iconic-unapprove:before { content: "\f446"; }
+.iconic-unsubscribe:before { content: "\f464"; }
+.iconic-unzoom:before { content: "\f401"; }
+.iconic-uparrow:before { content: "\f500"; }
+.iconic-user:before { content: "\f304"; }
+.iconic-video:before { content: "\f104"; }
+.iconic-videocamera:before { content: "\f517"; }
+.iconic-vimeo:before { content: "\f212"; }
+.iconic-warning:before { content: "\f414"; }
+.iconic-website:before { content: "\f475"; }
+.iconic-week:before { content: "\f306"; }
+.iconic-xpost:before { content: "\f504"; }
+.iconic-youtube:before { content: "\f213"; }
+.iconic-zoom:before { content: "\f402"; }

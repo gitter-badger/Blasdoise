@@ -1,0 +1,312 @@
+.mejs-container {
+	clear: both;
+}
+
+.mejs-container * {
+	font-family: Helvetica, Arial;
+}
+
+.mejs-container,
+.mejs-embed,
+.mejs-embed body,
+.mejs-container .mejs-controls {
+	background: #222222;
+}
+
+.mejs-controls a.mejs-horizontal-volume-slider {
+	display: table;
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-loaded,
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+	background: #ffffff;
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-current {
+	background: #333333;
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-total,
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+	background: rgba(255, 255, 255, .33);
+}
+
+.mejs-controls .mejs-time-rail span,
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+	border-radius: 0;
+}
+
+.mejs-controls .mejs-offscreen {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute;
+}
+
+.mejs-controls a:focus > .mejs-offscreen {
+	background-color: #f1f1f1;
+	border-radius: 0;
+	shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	position: absolute;
+	left: 0;
+	top: 15px;
+	text-decoration: none;
+	text-transform: none;
+	width: auto;
+}
+
+.mejs-overlay-loading {
+	background: transparent;
+}
+
+/* Override theme styles that may conflict with controls. */
+.mejs-controls button:hover {
+	border: none;
+	-webkit-shadow: none;
+	shadow: none;
+}
+
+.me-cannotplay {
+	width: auto !important;
+}
+
+.media-embed-details .bd-audio-shortcode {
+	display: inline-block;
+	max-width: 400px;
+}
+
+.audio-details .embed-media-settings {
+	overflow: visible;
+}
+
+.media-embed-details .embed-media-settings .setting span {
+	max-width: 400px;
+	width: auto;
+}
+
+.media-embed-details .embed-media-settings .checkbox-setting span {
+	display: inline-block;
+}
+
+.media-embed-details .embed-media-settings {
+	padding-top: 0;
+	top: 28px;
+}
+
+.media-embed-details .instructions {
+	padding: 16px 0;
+	max-width: 600px;
+}
+
+.media-embed-details .setting p,
+.media-embed-details .setting .remove-setting {
+	color: #a00;
+	font-size: 10px;
+	text-transform: uppercase;
+}
+
+.media-embed-details .setting .remove-setting {
+	padding: 0;
+}
+
+.media-embed-details .setting a:hover {
+	color: #f00;
+}
+
+.media-embed-details .embed-media-settings .checkbox-setting {
+	float: none;
+	margin: 0 0 10px;
+}
+
+.bd-video {
+	max-width: 100%;
+	height: auto;
+}
+
+.bd_attachment_holder .bd-video,
+.bd_attachment_holder .bd-audio-shortcode {
+	margin-top: 18px;
+}
+
+video.bd-video-shortcode,
+.bd-video-shortcode video {
+	max-width: 100%;
+	display: inline-block;
+}
+
+.video-details .bd-video-holder {
+	width: 100%;
+	max-width: 640px;
+}
+
+.bd-playlist {
+	border: 1px solid #cccccc;
+	padding: 10px;
+	margin: 12px 0 18px;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.bd-admin .bd-playlist {
+	margin: 0 0 18px;
+}
+
+.bd-playlist video {
+	display: inline-block;
+	max-width: 100%;
+}
+
+.bd-playlist audio {
+	display: none;
+	max-width: 100%;
+	width: 400px;
+}
+
+.bd-playlist .mejs-container {
+	margin: 0;
+	width: 100%;
+}
+
+.bd-playlist .mejs-controls .mejs-button button {
+	outline: 0;
+}
+
+.bd-playlist-light {
+	background: #ffffff;
+	color: #000000;
+}
+
+.bd-playlist-dark {
+	color: #ffffff;
+	background: #000000;
+}
+
+.bd-playlist-caption {
+	display: block;
+	max-width: 88%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.bd-playlist-item .bd-playlist-caption {
+	text-decoration: none;
+	color: #000000;
+	max-width: -webkit-calc(100% - 40px);
+	max-width: calc(100% - 40px);
+}
+
+.bd-playlist-item-meta {
+	display: block;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.bd-playlist-item-title {
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.bd-playlist-item-album {
+	font-style: italic;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.bd-playlist-item-artist {
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.bd-playlist-item-length {
+	position: absolute;
+	right: 3px;
+	top: 0;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.rtl .bd-playlist-item-length {
+	left: 3px;
+	right: auto;
+}
+
+.bd-playlist-tracks {
+	margin-top: 10px;
+}
+
+.bd-playlist-item {
+	position: relative;
+	cursor: pointer;
+	padding: 0 3px;
+	border-bottom: 1px solid #cccccc;
+}
+
+.bd-playlist-item:last-child {
+	border-bottom: 0;
+}
+
+.bd-playlist-light .bd-playlist-caption {
+	color: #333333;
+}
+
+.bd-playlist-dark .bd-playlist-caption {
+	color: #e5e5e5;
+}
+
+.bd-playlist-playing {
+	font-weight: bold;
+	background: #f5f5f5;
+}
+
+.bd-playlist-light .bd-playlist-playing {
+	background: #ffffff;
+	color: #000000;
+}
+
+.bd-playlist-dark .bd-playlist-playing {
+	background: #000000;
+	color: #ffffff;
+}
+
+.bd-playlist-current-item {
+	overflow: hidden;
+	margin-bottom: 10px;
+	height: 60px;
+}
+
+.bd-playlist .bd-playlist-current-item img {
+	float: left;
+	max-width: 60px;
+	height: auto;
+	margin-right: 10px;
+	padding: 0;
+	border: 0;
+}
+
+.rtl .bd-playlist .bd-playlist-current-item img {
+	float: right;
+	margin-left: 10px;
+	margin-right: 0;
+}
+
+.bd-playlist-current-item .bd-playlist-item-title,
+.bd-playlist-current-item .bd-playlist-item-artist {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.bd-audio-playlist .me-cannotplay span {
+	padding: 5px 15px;
+}

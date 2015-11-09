@@ -1,0 +1,937 @@
+#adminmenuback,
+#adminmenuwrap,
+#adminmenu,
+#adminmenu .bd-submenu {
+	width: 160px;
+	background-color: #333333;
+}
+
+#adminmenuback {
+	position: fixed;
+	top: 0;
+	bottom: -120px;
+	z-index: 1; /* positive z-index to avoid elastic scrolling woes in Safari */
+}
+
+#adminmenu {
+	clear: left;
+	margin: 12px 0;
+	padding: 0;
+	list-style: none;
+}
+
+.folded #adminmenuback,
+.folded #adminmenuwrap,
+.folded #adminmenu,
+.folded #adminmenu li.menu-top {
+	width: 36px;
+}
+
+.icon16 {
+	height: 18px;
+	width: 18px;
+	padding: 6px 6px;
+	margin: -6px 0 0 -8px;
+	float: left;
+}
+
+/* New Menu icons */
+
+.icon16:before {
+	color: #ffffff;
+	font: normal 20px/1 'basicons';
+	speak: none;
+	padding: 6px 0;
+	height: 34px;
+	width: 20px;
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-transition: all .1s ease-in-out;
+	transition: all .1s ease-in-out;
+}
+
+.icon16.icon-dashboard:before {
+	content: '\f226';
+}
+
+.icon16.icon-post:before {
+	content: '\f109';
+}
+
+.icon16.icon-media:before {
+	content: '\f104';
+}
+
+.icon16.icon-links:before {
+	content: '\f103';
+}
+
+.icon16.icon-page:before {
+	content: '\f105';
+}
+
+.icon16.icon-comments:before {
+	content: '\f101';
+	margin-top: 1px;
+}
+
+.icon16.icon-appearance:before {
+	content: '\f100';
+}
+
+.icon16.icon-plugins:before {
+	content: '\f106';
+}
+
+.icon16.icon-users:before {
+	content: '\f110';
+}
+
+.icon16.icon-tools:before {
+	content: '\f107';
+}
+
+.icon16.icon-settings:before {
+	content: '\f108';
+}
+
+.icon16.icon-site:before {
+	content: '\f112'
+}
+
+.icon16.icon-generic:before {
+	content: '\f111';
+}
+
+/* hide background-image for icons above */
+.icon16.icon-dashboard,
+.menu-icon-dashboard div.bd-menu-image,
+.icon16.icon-post,
+.menu-icon-post div.bd-menu-image,
+.icon16.icon-media,
+.menu-icon-media div.bd-menu-image,
+.icon16.icon-links,
+.menu-icon-links div.bd-menu-image,
+.icon16.icon-page,
+.menu-icon-page div.bd-menu-image,
+.icon16.icon-comments,
+.menu-icon-comments div.bd-menu-image,
+.icon16.icon-appearance,
+.menu-icon-appearance div.bd-menu-image,
+.icon16.icon-plugins,
+.menu-icon-plugins div.bd-menu-image,
+.icon16.icon-users,
+.menu-icon-users div.bd-menu-image,
+.icon16.icon-tools,
+.menu-icon-tools div.bd-menu-image,
+.icon16.icon-settings,
+.menu-icon-settings div.bd-menu-image,
+.icon16.icon-site,
+.menu-icon-site div.bd-menu-image,
+.icon16.icon-generic,
+.menu-icon-generic div.bd-menu-image {
+	background-image: none !important;
+}
+
+/*------------------------------------------------------------------------------
+  7.0 - Main Navigation (Left Menu)
+------------------------------------------------------------------------------*/
+
+#adminmenuwrap {
+	position: relative;
+	float: left;
+	z-index: 9990;
+}
+
+/* side admin menu */
+#adminmenu * {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#adminmenu li {
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+}
+
+#adminmenu a {
+	display: block;
+	line-height: 18px;
+	padding: 2px 5px;
+	color: #ffffff;
+}
+
+#adminmenu .bd-submenu a {
+	color: #dddddd;
+}
+
+#adminmenu .bd-submenu a:hover,
+#adminmenu .bd-submenu a:focus {
+	background: none;
+}
+
+#adminmenu a:hover,
+#adminmenu li.menu-top > a:focus,
+#adminmenu .bd-submenu a:hover,
+#adminmenu .bd-submenu a:focus {
+	color: #ffffff;
+}
+
+#adminmenu li.menu-top {
+	border: none;
+	min-height: 34px;
+	position: relative;
+}
+
+#adminmenu .bd-submenu {
+	list-style: none;
+	position: absolute;
+	top: -1000em;
+	left: 160px;
+	overflow: visible;
+	word-wrap: break-word;
+}
+
+#adminmenu .bd-submenu,
+.folded #adminmenu a.bd-has-current-submenu:focus + .bd-submenu,
+.folded #adminmenu .bd-has-current-submenu .bd-submenu {
+	padding: 7px 0 8px;
+	z-index: 9999;
+	background-color: #222222;
+}
+
+.js #adminmenu .sub-open,
+.js #adminmenu .opensub .bd-submenu,
+#adminmenu a.menu-top:focus + .bd-submenu,
+.no-js li.bd-has-submenu:hover .bd-submenu {
+	top: -1px;
+}
+
+#adminmenu .bd-has-current-submenu .bd-submenu,
+.no-js li.bd-has-current-submenu:hover .bd-submenu,
+#adminmenu a.bd-has-current-submenu:focus + .bd-submenu,
+#adminmenu .bd-has-current-submenu .bd-submenu.sub-open,
+#adminmenu .bd-has-current-submenu.opensub .bd-submenu {
+	position: relative;
+	z-index: 3;
+	top: auto;
+	left: auto;
+	right: auto;
+	bottom: auto;
+	border: 0 none;
+	margin-top: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	background-color: #222222;
+}
+
+/* ensure that bd-submenu's box shadow doesn't appear on top of the focused menu item's background. */
+#adminmenu li.menu-top:hover,
+#adminmenu li.opensub > a.menu-top,
+#adminmenu li > a.menu-top:focus {
+	position: relative;
+	background-color: #282828;
+	color: #ffffff;
+}
+
+.folded #adminmenu li.menu-top:hover,
+.folded #adminmenu li.opensub > a.menu-top,
+.folded #adminmenu li > a.menu-top:focus {
+	z-index: 10000;
+}
+
+#adminmenu li.bd-has-current-submenu a.bd-has-current-submenu,
+#adminmenu li.current a.menu-top,
+.folded #adminmenu li.bd-has-current-submenu,
+.folded #adminmenu li.current.menu-top,
+#adminmenu .bd-menu-arrow,
+#adminmenu .bd-has-current-submenu .bd-submenu .bd-submenu-head,
+#adminmenu .bd-menu-arrow div {
+	background: #282828;
+	color: #ffffff;
+}
+
+.folded #adminmenu .bd-submenu.sub-open,
+.folded #adminmenu .opensub .bd-submenu,
+.folded #adminmenu .bd-has-current-submenu .bd-submenu.sub-open,
+.folded #adminmenu .bd-has-current-submenu.opensub .bd-submenu,
+.folded #adminmenu a.menu-top:focus + .bd-submenu,
+.folded #adminmenu .bd-has-current-submenu a.menu-top:focus + .bd-submenu,
+.no-js.folded #adminmenu .bd-has-submenu:hover .bd-submenu  {
+	top: 0;
+	left: 36px;
+}
+
+.folded #adminmenu a.bd-has-current-submenu:focus + .bd-submenu,
+.folded #adminmenu .bd-has-current-submenu .bd-submenu {
+	position: absolute;
+	top: -1000em;
+}
+
+#adminmenu .bd-not-current-submenu .bd-submenu,
+.folded #adminmenu .bd-has-current-submenu .bd-submenu {
+	min-width: 160px;
+	width: auto;
+}
+
+#adminmenu .bd-submenu a {
+	font-size: 13px;
+	line-height: 1.2;
+	margin: 0;
+	padding: 6px 0;
+}
+
+#adminmenu .bd-submenu li.current,
+#adminmenu .bd-submenu li.current a,
+#adminmenu .opensub .bd-submenu li.current a,
+#adminmenu a.bd-has-current-submenu:focus + .bd-submenu li.current a,
+#adminmenu .bd-submenu li.current a:hover,
+#adminmenu .bd-submenu li.current a:focus {
+	color: #ffffff;
+}
+
+#adminmenu .bd-not-current-submenu li > a,
+.folded #adminmenu .bd-has-current-submenu li > a {
+	padding-right: 16px;
+	padding-left: 14px;
+	-webkit-transition: all .1s ease-in-out;
+	transition: all .1s ease-in-out;
+}
+
+#adminmenu .bd-has-current-submenu ul > li > a,
+.folded #adminmenu li.menu-top .bd-submenu > li > a {
+	padding: 6px 12px;
+}
+
+#adminmenu a.menu-top,
+#adminmenu .bd-submenu-head {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 18px;
+	padding: 0;
+}
+
+#adminmenu .bd-submenu-head {
+	display: none;
+}
+
+.folded #adminmenu .bd-menu-name {
+	position: absolute;
+	left: -999px;
+}
+
+.folded #adminmenu .bd-submenu-head {
+	display: block;
+}
+
+#adminmenu .bd-submenu li {
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
+#adminmenu .bd-menu-image img {
+	padding: 9px 0 0 0;
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+}
+
+#adminmenu div.bd-menu-name {
+	padding: 8px 0;
+}
+
+#adminmenu div.bd-menu-image {
+	float: left;
+	width: 36px;
+	height: 34px;
+	margin: 0;
+	text-align: center;
+}
+
+#adminmenu div.bd-menu-image.svg {
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: 20px auto;
+	background-size: 20px auto;
+}
+
+div.bd-menu-image:before {
+	color: #ffffff;
+	padding: 7px 0;
+	-webkit-transition: all .1s ease-in-out;
+	transition: all .1s ease-in-out;
+}
+
+#adminmenu div.bd-menu-image:before {
+	color: #ffffff;
+}
+
+#adminmenu li.bd-has-current-submenu:hover div.bd-menu-image:before,
+#adminmenu .bd-has-current-submenu div.bd-menu-image:before,
+#adminmenu .current div.bd-menu-image:before,
+#adminmenu a.bd-has-current-submenu:hover div.bd-menu-image:before,
+#adminmenu a.current:hover div.bd-menu-image:before,
+#adminmenu li.bd-has-current-submenu a:focus div.bd-menu-image:before,
+#adminmenu li.bd-has-current-submenu.opensub div.bd-menu-image:before {
+	color: #ffffff;
+}
+
+#adminmenu li:hover div.bd-menu-image:before,
+#adminmenu li a:focus div.bd-menu-image:before,
+#adminmenu li.opensub div.bd-menu-image:before {
+	color: #ffffff;
+}
+
+/* IE8 doesn't redraw the pseudo elements unless you make a change to the content, this restore the initial color after hover */
+.ie8 #adminmenu li.opensub div.bd-menu-image:before {
+	color: #ffffff;
+}
+
+.folded #adminmenu div.bd-menu-image {
+	width: 35px;
+	height: 30px;
+	position: absolute;
+	z-index: 25;
+}
+
+.folded #adminmenu a.menu-top {
+	height: 34px;
+}
+
+/* No @font-face support */
+.no-font-face #adminmenu .bd-menu-image {
+	display: none;
+}
+
+.no-font-face #adminmenu div.bd-menu-name {
+	padding: 8px 12px;
+}
+
+.no-font-face.auto-fold #adminmenu .bd-menu-name {
+	margin-left: 0;
+}
+/* End no @font-face support */
+
+/* Sticky admin menu */
+.sticky-menu #adminmenuwrap {
+	position: fixed;
+}
+
+/* A new arrow */
+
+.bd-menu-arrow {
+	display: none !important;
+}
+
+ul#adminmenu a.bd-has-current-submenu {
+	position: relative;
+}
+
+ul#adminmenu a.bd-has-current-submenu:after,
+ul#adminmenu > li.current > a.current:after {
+	right: 0;
+	border: solid 8px transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-right-color: #f1f1f1;
+	top: 50%;
+	margin-top: -8px;
+}
+
+.folded ul#adminmenu li:hover a.bd-has-current-submenu:after {
+	display: none;
+}
+
+.folded ul#adminmenu a.bd-has-current-submenu:after,
+.folded ul#adminmenu > li a.current:after {
+	border-width: 4px;
+	margin-top: -4px;
+}
+
+/* flyout menu arrow */
+#adminmenu li.bd-has-submenu.bd-not-current-submenu:hover:after {
+	right: 0;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-width: 8px;
+	top: 10px;
+	z-index: 10000;
+}
+
+.folded ul#adminmenu li.bd-has-submenu.bd-not-current-submenu:hover:after {
+	border-width: 4px;
+	margin-top: -4px;
+	top: 18px;
+}
+
+#adminmenu li.bd-has-submenu.bd-not-current-submenu.opensub:hover:after {
+	border-right-color: #222222;
+}
+
+#adminmenu li.menu-top:hover .bd-menu-image img,
+#adminmenu li.bd-has-current-submenu .bd-menu-image img {
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+#adminmenu li.bd-menu-separator {
+	height: 5px;
+	padding: 0;
+	margin: 0 0 6px 0;
+	cursor: inherit;
+}
+
+/* @todo: is this even needed given that it's nested beneath the above li.bd-menu-separator? */
+#adminmenu div.separator {
+	height: 2px;
+	padding: 0;
+}
+
+#adminmenu .bd-submenu .bd-submenu-head {
+	color: #ffffff;
+	font-weight: 400;
+	font-size: 14px;
+	padding: 8px 4px 8px 11px;
+	margin: -7px 0px 4px;
+}
+
+#adminmenu li.current,
+.folded #adminmenu li.bd-menu-open {
+	border: 0 none;
+}
+
+#adminmenu .awaiting-mod,
+#adminmenu .update-plugins {
+	display: inline-block;
+	background-color: #d54e21;
+	color: #ffffff;
+	font-size: 9px;
+	line-height: 17px;
+	font-weight: 600;
+	margin: 1px 0 0 2px;
+	vertical-align: top;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	z-index: 26;
+}
+
+#adminmenu li .awaiting-mod span,
+#adminmenu li span.update-plugins span {
+	display: block;
+	padding: 0 6px;
+}
+
+#adminmenu li.current a .awaiting-mod,
+#adminmenu	li a.bd-has-current-submenu .update-plugins {
+	background-color: #00b9eb;
+	color: #ffffff;
+}
+
+#adminmenu li span.count-0 {
+	display: none;
+}
+
+#collapse-menu {
+	font-size: 13px;
+	line-height: 34px;
+	margin-top: 10px;
+	color: #ffffff;
+	-webkit-transition: all .1s ease-in-out;
+	transition: all .1s ease-in-out;
+}
+
+#collapse-menu:hover,
+#collapse-menu:hover #collapse-button div:after {
+	color: #ffffff;
+}
+
+.folded #collapse-menu span {
+	display: none;
+}
+
+#collapse-button,
+#collapse-button div {
+	width: 15px;
+	height: 15px;
+}
+
+#collapse-button {
+	float: left;
+	height: 15px;
+	margin: 10px 10px 10px 11px;
+	width: 15px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#bdwrap #collapse-button div {
+	padding: 0;
+}
+
+#collapse-button div:after {
+	content: '\f148';
+	display: block;
+	line-height: 15px;
+	left: -3px;
+	top: -3px;
+	color: #ffffff;
+	font: normal 20px/1 'basicons' !important;
+	speak: none;
+	margin: 0 auto;
+	padding: 0 !important;
+	position: relative;
+	text-align: center;
+	width: 20px;
+	-webkit-transition: all .1s ease-in-out;
+	transition: all .1s ease-in-out;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* rtl:ignore */
+.folded #collapse-button div:after,
+.rtl #collapse-button div:after {
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.rtl.folded #collapse-button div:after {
+	-webkit-transform: none;
+	-ms-transform: none;
+	transform: none;
+}
+
+/**
+ * Toolbar menu toggle
+ */
+li#bd-admin-bar-menu-toggle {
+	display: none;
+}
+
+/* Hide-if-customize for items we can't add classes to */
+.customize-support #menu-appearance a[href="themes.php?page=custom-header"],
+.customize-support #menu-appearance a[href="themes.php?page=custom-background"] {
+	display: none;
+}
+
+/* Auto-folding of the admin menu */
+@media only screen and (max-width: 960px) {
+	.auto-fold #bdcontent,
+	.auto-fold #bdfooter {
+		margin-left: 36px;
+	}
+
+	.auto-fold #adminmenuback,
+	.auto-fold #adminmenuwrap,
+	.auto-fold #adminmenu,
+	.auto-fold #adminmenu li.menu-top {
+		width: 36px;
+	}
+
+	.auto-fold #adminmenu .bd-submenu.sub-open,
+	.auto-fold #adminmenu .opensub .bd-submenu,
+	.auto-fold #adminmenu .bd-has-current-submenu .bd-submenu.sub-open,
+	.auto-fold #adminmenu .bd-has-current-submenu.opensub .bd-submenu,
+	.auto-fold #adminmenu a.menu-top:focus + .bd-submenu,
+	.auto-fold #adminmenu .bd-has-current-submenu a.menu-top:focus + .bd-submenu  {
+		top: 0px;
+		left: 36px;
+	}
+
+	.auto-fold #adminmenu a.bd-has-current-submenu:focus + .bd-submenu,
+	.auto-fold #adminmenu .bd-has-current-submenu .bd-submenu {
+		position: absolute;
+		top: -1000em;
+		margin-right: -1px;
+		padding: 7px 0 8px;
+		z-index: 9999;
+	}
+
+	.auto-fold #adminmenu .bd-has-current-submenu .bd-submenu {
+		min-width: 150px;
+		width: auto;
+	}
+
+	.auto-fold #adminmenu .bd-has-current-submenu li > a {
+		padding-right: 16px;
+		padding-left: 14px;
+	}
+
+
+	.auto-fold #adminmenu li.menu-top .bd-submenu > li > a {
+		padding-left: 12px;
+	}
+
+	.auto-fold #adminmenu .bd-menu-name {
+		position: absolute;
+		left: -999px;
+	}
+
+	.auto-fold #adminmenu .bd-submenu-head {
+		display: block;
+	}
+
+	.auto-fold #adminmenu div.bd-menu-image {
+		height: 30px;
+		width: 34px;
+		position: absolute;
+		z-index: 25;
+	}
+
+	.auto-fold #adminmenu a.menu-top {
+		height: 34px;
+	}
+
+	.auto-fold #adminmenu li.bd-menu-open {
+		border: 0 none;
+	}
+
+	.auto-fold #adminmenu .bd-has-current-submenu.menu-top-last {
+		margin-bottom: 0;
+	}
+
+	.auto-fold ul#adminmenu li:hover a.bd-has-current-submenu:after {
+		display: none;
+	}
+
+	.auto-fold ul#adminmenu li.bd-has-submenu.bd-not-current-submenu:hover:after {
+		border-width: 4px;
+		margin-top: -4px;
+		top: 16px;
+	}
+
+	.auto-fold ul#adminmenu a.bd-has-current-submenu:after,
+	.auto-fold ul#adminmenu > li a.current:after {
+		border-width: 4px;
+		margin-top: -4px;
+	}
+
+	.auto-fold #adminmenu li.menu-top:hover,
+	.auto-fold #adminmenu li.opensub > a.menu-top,
+	.auto-fold #adminmenu li > a.menu-top:focus {
+		z-index: 10000;
+	}
+
+	.auto-fold #collapse-menu span {
+		display: none;
+	}
+
+	.auto-fold #collapse-button div {
+		background: none;
+	}
+
+	/* rtl:ignore */
+	.auto-fold #collapse-button div:after {
+		-webkit-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		transform: rotate(180deg);
+	}
+
+	.rtl.auto-fold #collapse-button div:after {
+		-webkit-transform: none;
+		-ms-transform: none;
+		transform: none;
+	}
+
+}
+
+@media screen and ( max-width: 782px ) {
+	.auto-fold #bdcontent {
+		position: relative;
+		margin-left: 0;
+		padding-left: 10px;
+	}
+
+	.sticky-menu #adminmenuwrap {
+		position: relative;
+		z-index: auto;
+		top: 0;
+	}
+
+	/* Sidebar Adjustments */
+	.auto-fold #adminmenu,
+	.auto-fold #adminmenuback,
+	.auto-fold #adminmenuwrap {
+		position: absolute;
+		width: 190px;
+		z-index: 100;
+	}
+
+	.auto-fold #adminmenuback,
+	.auto-fold #adminmenuwrap {
+		display: none;
+	}
+
+	.auto-fold .bd-responsive-open #adminmenuback,
+	.auto-fold .bd-responsive-open #adminmenuwrap {
+		display: block;
+	}
+
+	.auto-fold #adminmenu li.menu-top {
+		width: 100%;
+	}
+
+	/* Resize the admin menu items to a comfortable touch size */
+	.auto-fold #adminmenu li a {
+		font-size: 16px;
+		padding: 5px;
+	}
+
+	.auto-fold #adminmenu li.menu-top .bd-submenu > li > a {
+		padding: 10px 10px 10px 20px;
+	}
+
+	/* Restore the menu names */
+	.auto-fold #adminmenu .bd-menu-name {
+		position: static;
+		margin-left: 35px;
+	}
+
+	/* Switch the arrow side */
+	.auto-fold ul#adminmenu a.bd-has-current-submenu:after,
+	.auto-fold ul#adminmenu > li.current > a.current:after {
+		border-width: 8px;
+		margin-top: -8px;
+	}
+
+	.auto-fold ul#adminmenu li.bd-has-submenu.bd-not-current-submenu:hover:after {
+		display: none;
+	}
+
+	/* Make the submenus appear correctly when tapped. */
+	#adminmenu .bd-submenu {
+		position: relative;
+		display: none;
+	}
+
+	.auto-fold #adminmenu .selected .bd-submenu,
+	.auto-fold #adminmenu .bd-menu-open .bd-submenu {
+		position: relative;
+		display: block;
+		top: 0;
+		left: -1px;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+
+	.auto-fold #adminmenu .selected .bd-submenu:after,
+	.auto-fold #adminmenu .bd-menu-open .bd-submenu:after {
+		display: none;
+	}
+
+	.auto-fold #adminmenu .opensub .bd-submenu {
+		display: none;
+	}
+
+	.auto-fold #adminmenu .selected .bd-submenu {
+		display: block;
+	}
+
+	.auto-fold ul#adminmenu li:hover a.bd-has-current-submenu:after {
+		display: block;
+	}
+
+	.auto-fold #adminmenu a.menu-top:focus + .bd-submenu,
+	.auto-fold #adminmenu .bd-has-current-submenu a.menu-top:focus + .bd-submenu {
+		position: relative;
+		left: -1px;
+		right: 0;
+		top: 0;
+	}
+
+	/* Remove submenu headers and adjust sub meu*/
+	#adminmenu .bd-submenu .bd-submenu-head {
+		display: none;
+	}
+
+	/* Toolbar menu toggle */
+	#bd-responsive-toggle {
+		position: fixed;
+		top: 5px;
+		left: 4px;
+		padding-right: 10px;
+		z-index: 99999;
+		border: none;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	#bdadminbar #bd-admin-bar-menu-toggle a {
+		display: block;
+		padding: 0;
+		overflow: hidden;
+		outline: none;
+		text-decoration: none;
+		border: 1px solid transparent;
+		background: none;
+		height: 44px;
+		margin-left: -1px;
+	}
+
+	.bd-responsive-open #bdadminbar #bd-admin-bar-menu-toggle a {
+		background: #333333;
+	}
+
+	li#bd-admin-bar-menu-toggle {
+		display: block;
+	}
+
+	#bdadminbar #bd-admin-bar-menu-toggle a:hover {
+		border: 1px solid transparent;
+	}
+
+	#bdadminbar #bd-admin-bar-menu-toggle .ab-icon:before {
+		content: '\f228';
+		display: inline-block;
+		float: left;
+		font: normal 40px/45px 'Basicons';
+		vertical-align: middle;
+		outline: none;
+		margin: 0;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		height: 44px;
+		width: 50px;
+		padding: 0;
+		border: none;
+		text-align: center;
+		text-decoration: none;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	.bd-responsive-open #bdadminbar #bd-admin-bar-menu-toggle .ab-icon:before {
+		color: #ffffff;
+	}
+}
+
+/* Smartphone */
+@media screen and (max-width: 600px) {
+	#adminmenuwrap,
+	#adminmenuback {
+		display: none;
+	}
+
+	.bd-responsive-open #adminmenuwrap,
+	.bd-responsive-open #adminmenuback {
+		display: block;
+	}
+
+	.auto-fold #adminmenu {
+		top: 46px;
+	}
+}
